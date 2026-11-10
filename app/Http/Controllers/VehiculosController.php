@@ -38,6 +38,17 @@ class VehiculosController extends Controller
             'capacidad' => 'required|integer|min:1',
             'tarifa_diaria' => 'required|decimal:2|min:0',
             'estado' => 'required|string|max:30|min:3',
+        ],
+        [
+            'numero_placa.required' => 'El campo número de placa es obligatorio.',
+            'numero_placa.unique' => 'El número de placa ya está registrado.',
+            'marca.required' => 'El campo marca es obligatorio.',
+            'modelo.required' => 'El campo modelo es obligatorio.',
+            'tipo_vehiculo.required' => 'El campo tipo de vehículo es obligatorio.',
+            'color.required' => 'El campo color es obligatorio.',
+            'capacidad.required' => 'El campo capacidad es obligatorio.',
+            'tarifa_diaria.required' => 'El campo tarifa diaria es obligatorio.',
+            'estado.required' => 'El campo estado es obligatorio.',
         ]);
 
         vehiculos::create($validated);
@@ -75,6 +86,17 @@ class VehiculosController extends Controller
             'capacidad' => 'required|integer|min:1',
             'tarifa_diaria' => 'required|decimal:2|min:0',
             'estado' => 'required|string|max:30|min:3',
+        ],
+        [
+            'numero_placa.required' => 'El campo número de placa es obligatorio.',
+            'numero_placa.unique' => 'El número de placa ya está registrado.',
+            'marca.required' => 'El campo marca es obligatorio.',
+            'modelo.required' => 'El campo modelo es obligatorio.',
+            'tipo_vehiculo.required' => 'El campo tipo de vehículo es obligatorio.',
+            'color.required' => 'El campo color es obligatorio.',
+            'capacidad.required' => 'El campo capacidad es obligatorio.',
+            'tarifa_diaria.required' => 'El campo tarifa diaria es obligatorio.',
+            'estado.required' => 'El campo estado es obligatorio.',
         ]);
 
         $vehiculos->update($validated);
